@@ -1,0 +1,92 @@
+<div class="row">
+    <div [ngClass]="isSidePanelVisible ? 'col-8' : 'col-12'" class="col-8">
+<div class="card">
+    <div class="card-header bg-primary">
+        <div class="row">
+            <div class="col-6">
+                Courses List
+            </div>
+            <div class="col-6 text-end">
+                <div class="btn btn-sm btn-success" (click)="opensidepanel()">New</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-body">
+<div class="row">
+    <div class="col-3">
+        <div class="card" >
+            <img class="card-img-top"style=height:150px width:100px src="assets/banners/Untitled design(45).jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">React js</h4>
+              <p class="card-text">Some example text.</p>
+              <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card" >
+            <img class="card-img-top"style=height:150px width:100px src="assets/banners/Untitled design(44).jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Node js</h4>
+              <p class="card-text">Some example text.</p>
+              <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card" >
+            <img class="card-img-top"style=height:150px width:100px src="assets/banners/Untitled design(46).jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Python</h4>
+              <p class="card-text">Some example text.</p>
+              <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-3">
+        <div class="card" >
+            <img class="card-img-top" style=height:150px width:100px src="assets/banners/Untitled design(43).jpg" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">Java Script</h4>
+              <p class="card-text">Some example text.</p>
+              <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+          </div>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+<div class="col-4" *ngIf="isSidePanelVisible">
+    <div class="card">
+        <div class="card-header bg-primary">
+            <div class="row">
+                <div class="col-6">
+                    New Courses
+                </div>
+                <div class="col-6 text-end">
+                    <div class="btn btn-sm btn-success" (click)="closesidepanel()">close</div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <label for="">CID</label>
+                    <input type="text" class="form-control" [(ngModel)]="coursesObj.departmentId">
+                </div>
+                <div class="col-6">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="coursesObj.departmentName">
+                </div>
+                <div class="col-12">
+                    <label for="">Logo</label>
+                    <input type="text" class="form-control" [(ngModel)]="coursesObj.departmentLogo">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
